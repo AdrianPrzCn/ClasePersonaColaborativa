@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package clasepersonacolaborativa;
 
-/**
- *
- * @author ciclos
- */
+import java.time.LocalDate;
+
 public class Persona {
+    
+    private String nombre;
+    private String apellido;
+    private LocalDate fechaNacimiento;
+
+    public Persona(String nombre, String apellido, LocalDate fechaNacimiento) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+    
+    
     
 }
