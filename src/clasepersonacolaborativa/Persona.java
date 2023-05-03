@@ -57,5 +57,40 @@ public class Persona {
         }
 
     }
+    
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String getFecha_de_nacimiento(char separador) {
+       
+        String cadenaFecha = null;
+
+        if (!"-".equals(separador) || !"/".equals(separador)) {
+
+            throw new IllegalArgumentException();
+
+        } else {
+           
+            if (this.fechaNacimiento != null) {
+               
+                cadenaFecha = String.format("%02d&c%02d%c%04d", this.fechaNacimiento.getDayOfMonth() + separador +
+                        this.fechaNacimiento.getMonthValue() + separador + this.fechaNacimiento.getYear());
+               
+            }
+
+        }
+       
+        return cadenaFecha;
+       
+    }
+
+    public String getFecha_de_nacimiento() {
+        return getFecha_de_nacimiento('-');
+    }
 
 }
